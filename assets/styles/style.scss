@@ -1,0 +1,222 @@
+// *** Sytle guide instruction *** //
+
+// Search for bellow components in order to edit the style guide
+//-- Custom style
+//-- Color variables
+//-- Deafult style
+//-- Typography style
+//-- Button style
+//-- Global style
+//-- Main page style
+
+
+// Custom Fonts
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/metropolis.regular.otf") format("otf"),
+       url("../fonts/metropolis.medium.otf") format("otf"),
+       url("../fonts/metropolis.semi-bold.otf") format("otf"),
+       url("../fonts/metropolis.bold.otf") format("otf"),
+       url("../fonts/metropolis.extra-bold.otf") format("otf");
+       
+}
+
+// Color
+$colorGreen:#02bb82;
+$colorYellow:#FFBC00;
+$colorTitle:#021414;
+$textColor:#4F5A68;
+$bgGreen:#062324;
+$bgGrey:#F5F5F9;
+
+
+*{
+  outline: none;
+}
+
+// Deafult style
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body{
+  font-size: 1.6rem;
+  background: #fff;
+}
+
+
+// Typography
+h1{
+  font-style: normal;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 62px;
+  @media screen and (max-width:1199px) {
+    font-size: 52px;
+  }
+  @media screen and (max-width:995px) {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  @media screen and (max-width:575px) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+h2{
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+  @media screen and (max-width:768px) {
+    font-size: 32px;
+    line-height: 51px;
+  }
+}
+h3{
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 46px;
+  @media screen and (max-width:768px) {
+    font-size: 32px;
+    line-height: 50px;
+  }
+}
+h4{
+  font-weight: 600;
+  font-size: 28;
+  line-height: 32px;
+}
+h5{
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 36px;
+  @media screen and (max-width:768px) {
+    font-size: 22px;
+    line-height: 35px;
+  }
+}
+h6{
+  font-weight: 600;
+  font-size: 20px;
+}
+p{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: $textColor;
+}
+
+// Button style
+.btn__primary{
+  display: inline-block;
+  padding: 18px 40px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  color: #1B1B1B;
+  background: $colorYellow;
+  border: 1px solid $colorYellow;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: .3s;
+  &:hover{
+    color: #1B1B1B;
+    opacity: .9;
+  }
+  @media screen and (max-width:575px) {
+    font-size: 14px;
+    padding: 15px 30px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// Global style
+@media (min-width: 1400px){
+  .container{
+    max-width: 1140px;
+  }
+}
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.d__block{
+  display: block;
+}
+.d__flex{
+  display: flex;
+}
+.d__iblock{
+  display: inline-block;
+}
+.jc__center{
+  justify-content: center;
+}
+.jc__between{
+  justify-content: space-between;
+}
+.ai__center{
+  align-items: center;
+}
+.t__center{
+  text-align: center;
+}
+
+
+// Main page style starts here
+
+// Top banner style
+.topBanner{
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 90px;
+  background: $bgGreen;
+  @media screen and (max-width:575px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  &__left{
+    h1{
+      color: #fff;
+      span.g__color{
+        color: $colorGreen;
+      }
+      @media screen and (max-width:1199px) {
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+    }
+    p{
+      font-weight: 500;
+      font-size: 18px;
+      color: #F5F5F9;
+      @media screen and (max-width:1199px) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  &__btn{
+    p{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 12px;
+      color: #CCCCCC;
+      margin-left: 10px;
+      @media screen and (max-width:575px) {
+        text-align: center;
+      }
+    }
+  }
+  &__right{
+    text-align: right;
+    img{
+      @media screen and (max-width:1199px) {
+        max-width: 100%;
+      }
+    }
+  }
+}
